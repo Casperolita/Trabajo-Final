@@ -1,0 +1,55 @@
+﻿
+
+/**/
+/**/
+/**/
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #e18547;
+    /*position: sticky;*/
+    position: fixed;
+    top: 0;
+    z-index: 100; /* La barra de navegación debe estar por encima de otros elementos */
+}
+
+ /*.navbar a {
+    text-align: right;     
+}*/
+
+.navbar a {
+    color: #1D3557; /* Cambia color texto */
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold; /* Agrega esta línea para hacer las letras negritas */
+}
+.navbar a:hover {
+    background-color: #1D3557;
+    color: #F1FAEE; /* Cambia el color del texto */
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        position: unset;
+    }
+    .navbar a {
+        text-align: left; /* Ajusta la alineación del texto a la izquierda en dispositivos pequeños si es necesario */
+    }
+}
+
+/*estilos al cuerpo de la página*/
+body {
+   background-color: #d8fbfb;
+  }
+ 
+ .no-select {
+    user-select: none;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+ }
