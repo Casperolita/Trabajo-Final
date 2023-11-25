@@ -1,0 +1,203 @@
+﻿/*Esta página es una réplica de algunas partes de la página madre que se llama "Tienda de plantas"*/
+
+/* Estilos comunes */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: verdana, Geneva, Tahoma, sans-serif;
+    /*font-size: 16px; tuve que quitarlo porque se desacomodó todo el contenido*/
+}
+
+img {
+    border-radius: 10px;
+}
+
+
+.navbar {
+    display: flex;    
+    justify-content: flex-end;
+    background-color: #e18547;
+    width: 100%;
+    /*border-width: 10px;
+    border-style: inset outset;
+    border-color: #1D3557;*/
+    /*position: sticky;*/
+    color: #1D3557;
+    top: 0;
+    position: fixed; /*en la página madre usé sticky*/
+    
+
+    z-index: 100; /* La barra de navegación debe estar por encima de otros elementos; no lo usé en la página madre.*/
+}
+
+.navbar a {
+    color: #1D3557; 
+    text-decoration: none;
+    font-weight: bold;
+    padding: 3px 40px;/*los valores son distintos a la página madre; la modificación afecta al menú y submenú. Si modifico "40" aumentará el ancho*/ 
+    /*text-align: right;  
+    font-size: 24px; No entiendo porque el efecto es distinto en la página madre que es "Tienda de plantas"*/
+    
+}
+
+.navbar a:hover {
+    background-color: #1D3557;
+    color: #F1FAEE; /* Cambia el color del texto */
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 0;/*el valor usado aquí es diferente al de la página madre; los 10px producen una separación con el borde superior e inferior*/
+}
+
+.navbar li {
+    display: inline-block;
+    margin-right: 0px; /*el valor usado en la página madre es de 20px*/
+    margin-left: 0; /*no logré el desplazamiento hacia la izquierda*/ 
+    position: relative;
+}
+
+/* Estilos para el submenú */
+.submenu ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ca8217;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0px 0px; /*A pesar del 0, el cambio de color tapaba al siguiente nombre*/
+}
+
+.submenu:hover ul {
+    display: block;
+}
+
+.submenu ul li {
+    text-align: left !important; /* No funciona, el texto queda centralizado y no pude poner completos algunos títulos*/
+}
+
+.navbar li.submenu ul li {
+    text-align: left !important; /* No funciona, el texto queda centralizado y no pude poner completos algunos títulos*/
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        position: unset;
+    }
+    .navbar a {
+        text-align: left; 
+    }
+}
+
+
+form {
+    max-width: 600px; 
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    }
+
+form fieldset {
+        margin-top: 40px; 
+    }   
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #45a049;
+}
+
+form fieldset p {
+    margin-top: 10px; /* para separar las frases anteriores y posteriores */
+    margin-bottom: 10px;
+    /*font-weight: bold;  */
+    font-size: 11px; 
+}
+
+
+/* Estilos para hacer el formulario responsive */
+@media (max-width: 600px) {
+    input {
+        margin-bottom: 10px;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+        width: 100%;
+    }
+}
+
+.footer {
+    padding: 0.9375rem 1.875rem;
+    background-color: #e18547;
+}
+
+.ft-legal-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ft-legal-list li {
+    margin: 0.125rem 0.625rem;
+    white-space: nowrap;
+    color: #1D3557;
+}
+
+.footer p {
+    margin-bottom: 10px;
+    font-size: 11px; 
+    color: #fff;
+    margin: 0 0 15px; 
+    font-style: normal;
+    line-height: 1.8em;
+    max-width: 100%;
+    /*font-family: verdana, Geneva, Tahoma, sans-serif;  */
+}
+
+/* se aplica al penúltimo */
+.ft-legal-list li:nth-last-child(2) {
+    flex: 1; /* lo mismo que flex-grow: 1; se expandirá y tomará tanto espacio como sea posible */ 
+}
