@@ -1,0 +1,261 @@
+﻿/*Esta página es una réplica de, algunas partes de la página madre que se llama "Tienda de plantas".*/
+
+* {
+    box-sizing: border-box;
+    /*margin: 20; en otra página usé valor 0; el cambio de medida afecta el margen que rodea los títulos*/
+    padding: 0;
+}
+
+body {
+    font-family: verdana, Geneva, Tahoma, sans-serif;
+    display: flex; /*esto no lo puse en las otras páginas.*/
+    justify-content: center;/*esto no lo puse en las otras páginas.*/
+}
+
+img {
+    border-radius: 10px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #e18547;
+    width: 100%;
+    /*border-width: 10px;
+    border-style: inset outset;
+    border-color: #1D3557;*/
+    color: #1D3557;
+    top: 0;
+    position: fixed; /*en la página madre usé sticky*/
+    z-index: 100;/*no lo usé en la página madre.*/
+}
+
+.navbar a {
+    color: #1D3557;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 3px 40px;/*los valores son distintos a la página madre; la modificación afecta al menú y submenú. Si modifico "40" aumentará el ancho*/ 
+    /*text-align: right;  
+    font-size: 24px; No entiendo porque el efecto es distinto en la página madre que es "Tienda de plantas"*/    
+}
+
+.navbar a:hover {
+    background-color: #1D3557;
+    color: #F1FAEE;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 0;/*el valor usado aquí es diferente al de la página madre; los 10px producen una separación con el borde superior e inferior*/
+}
+
+.navbar li {
+    display: inline-block;
+    margin-right: 0px; /*el valor usado en la página madre es de 20px*/
+    margin-left: 0; /*no logré el desplazamiento hacia la izquierda*/ 
+    position: relative;
+}
+
+/* Estilos para el submenú */
+.submenu ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ca8217;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0px 0px; /*A pesar del 0, el cambio de color tapaba al siguiente nombre*/
+}
+
+.submenu:hover ul {
+    display: block;
+}
+
+.submenu ul li {
+    text-align: left !important; /* No funciona, el texto queda centralizado y no pude poner completos algunos títulos*/
+}
+
+.navbar li.submenu ul li {
+    text-align: left !important; /* No funciona, el texto queda centralizado y no pude poner completos algunos títulos*/
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        position: unset;
+    }
+    .navbar a {
+        text-align: left;
+    }
+}
+
+.formulario {
+    max-width: 600px;
+    margin: auto auto auto auto;
+    /*margin: 35px 35px 35px 35px; establece valores para el grosor del área del margen*/
+    border: 1px solid #ccc;
+    padding: 20px;/*al colocar valor 0 solo disminuyó el espacio superior*/ 
+    border-radius: 10px;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Arimo";
+    background-color: #eb9478;
+    box-shadow: 9px 13px 25px 0px rgba(0, 0, 0, 0.18);
+}
+
+.container {
+    width: 80%;/*actúa sobre el tamaño de las celdas*/
+    padding: 5% 5%;
+}
+
+form {
+    width: 100%; /*Se achican las celdas y un título se encima sobre sí mismo*/
+    max-height: 565px; 
+    overflow: auto; 
+}
+
+form h1 {
+    text-align: center;
+}
+
+h1 {
+    align-self: center;
+    font-size: 24px;
+    line-height: 10px;
+    color: #493b76;
+    letter-spacing: 1px;
+}
+
+
+
+    input {
+        width: 100%;
+        min-height: 25px;
+        border: 0;
+        font-size: 1rem;
+        letter-spacing: 0.15rem;
+        font-family: "Arimo";
+        margin-top: 5px;
+        color: #8e2807;
+        border-radius: 4px;
+    }
+
+
+    label {
+        text-transform: uppercase;/*mayúscula para el texto de las etiquetas*/
+        font-size: 12px;
+        letter-spacing: 2px;
+        color: rgb(28, 3, 75); /* color de texto blanco */
+        font-weight: bold; /* texto en negrita */
+        background-color: #cfc9e1; /*color de fondo de las etiquetas*/
+    }
+
+
+    h1:nth-of-type(2) {/*nth selecciona el segundo elemento de un tipo determinado dentro de un elemento padre*/
+        margin-top: 10%; /*impide que los títulos se encimen a la  celdas*/
+        margin-bottom: 20px; /* margen inferior para separar de otros elementos */
+    }
+    
+.group {
+    display: flex;
+    justify-content: space-between;
+   
+   div {
+    width: 45%;
+}
+
+
+    &:nth-child(3) {/*Esta propiedad afecta al botón azul. Si quito la propiedad, el color azul del botón desaparece y se desplaza a la izquierda. Si agrego la propiedad el botón sigue estando a la izquierda pero con el color azul.*/
+        width: 30%;
+    }
+} 
+
+.input-group {
+    font-family: verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2rem; 
+
+.input-group input {
+    padding-left: 10px;
+    font-family: verdana, Geneva, Tahoma, sans-serif;
+  }
+}
+
+/*.input-group input:valid {
+    background-color: #cfc9e1;
+}*/
+.input-group input:valid {
+    background-color: #b8dcf4; 
+}
+
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+    /*align-items: flex-end;*/
+}
+
+
+.btns > button {
+    padding: 10px 20px;
+    margin: 3px 0;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    height: 30px;
+    width: 40%;
+    align-items: center;
+}
+
+input:focus,
+button:focus {
+    outline: aqua;
+}
+
+.footer {/*Aquí no pude usar los mismos valores que en otras páginas porque, tardé mucho en acomodar el footer al pie de la página*/
+    /*padding: 0.0rem 1.0rem 0.0rem;*/
+    padding: 0.0rem 0.0rem; 
+    margin: 0; 
+    background-color: #e18547;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+ }
+
+.ft-legal-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+}
+
+.ft-legal-list li {
+    /*margin: 0.125rem 0.625rem;*/
+    white-space: nowrap;
+    color: #1D3557;  
+}
+
+.footer p {
+    font-size: 9px !important;  /*no se produce el cambio*/
+    color: #fff;/*no se produce el cambio*/
+    font-style: normal;
+    font-weight: bold; /*no se produce el cambio*/
+    max-width: 100%;
+    margin: 0; 
+    /*margin-bottom: 5px;*/
+    /*margin: 0 0 15px; */
+    /*padding-left: 50px;*/
+    /*line-height: 1.8em;*/
+}
+
+
+.ft-legal-list li:nth-last-child(2) { /* se aplica al penúltimo */
+    flex: 1; /* lo mismo que flex-grow: 1; se expandirá y tomará tanto espacio como sea posible */ 
+    margin-right: 30px; /*no funciona; no se produce el espacio*/
+}
