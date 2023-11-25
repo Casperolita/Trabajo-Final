@@ -1,0 +1,263 @@
+﻿/*Esta es la página madre. Primero diseñé este index y, luego lo repliqué para hacer las otras páginas.*/ 
+/* Estilos comunes */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: verdana, Geneva, Tahoma, sans-serif;
+    /*font-size: 16px;*/
+}
+
+img {
+    border-radius: 10px;
+}
+
+/* Estilo header */
+
+header {
+    padding: 20px;
+    text-align: left;
+    background-image: url(../img/fant.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    width: 100%;
+}
+
+header div {
+    padding: 20px; /*el valor lo modifiqué a 10px en las siguientes páginas que hice a partir de esta*/
+    border-radius: 10px;
+    /*background-image: url(../img/degraban.jpg);*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px; /*el valor lo modifiqué a 100px en las siguientes páginas que hice a partir de esta*/
+    width: 70%;
+    margin: 0 auto;
+}
+
+.nombre {
+    color: #4df24a;
+    font-size: 140px; /*reduje a 80 px en las siguientes páginas que hice a partir de esta*/
+    font-family: 'Arial Narrow Bold';
+    font-weight: bold;
+    height: 90%;
+    text-shadow: 
+    -1px -1px 0 blue,  
+    1px -1px 0 blue,
+    -1px  1px 0 blue,
+    1px  1px 0 blue;
+}
+
+.verdant {/*esta parte no la usé en las otras páginas creadas a partir de esta*/
+    /*left: 20%;*/
+    text-align: left;
+    color: #fef202;
+    font-size: 140px;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    height: 90%;
+    text-shadow: 0 0 1px #FFA500, 0 0 2px #FFA500, 0 0 3px #FFA500, 0 0 4px #FFA500, 0 0 5px #FFA500, 0 0 6px #FFA500, 0 0 7px #FFA500, 0 0 8px #FFA500, 0 0 9px #FFA500, 0 0 10px #FFA500, 0 0 11px #FFA500, 0 0 12px #FFA500, 0 0 13px #FFA500, 0 0 14px #FFA500, 0 0 15px #FFA500, 0 0 16px #FFA500, 0 0 17px #FFA500, 0 0 18px #FFA500, 0 0 19px #FFA500, 0 0 20px #FFA500, 0 0 21px #FFA500, 0 0 22px #FFA500, 0 0 23px #FFA500, 0 0 24px #FFA500, 0 0 25px #FFA500, 0 0 26px #FFA500, 0 0 27px #FFA500, 0 0 28px #FFA500, 0 0 29px #FFA500, 0 0 30px #FFA500, 0 0 31px #FFA500, 0 0 32px #FFA500, 0 0 33px #FFA500, 0 0 34px #FFA500, 0 0 35px #FFA500, 0 0 36px #FFA500, 0 0 37px #FFA500, 0 0 38px #FFA500, 0 0 39px #FFA500, 0 0 40px #FFA500, 0 0 41px #FFA500, 0 0 42px #FFA500, 0 0 43px #FFA500, 0 0 44px #FFA500, 0 0 45px #FFA500, 0 0 46px #FFA500, 0 0 47px #FFA500, 0 0 48px #FFA500, 0 0 49px #FFA500, 0 0 50px #FFA500;
+}
+
+@media (max-width: 800px) {
+    header {
+        background-position: center;
+    }
+
+    header div {
+        width: 90%;
+    }
+}
+
+/* Estilos navbar */
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #e18547;
+    width: 100%;
+    border-width: 10px;
+    border-style: inset outset;
+    border-color: #1D3557;
+    color: #1D3557;
+    top: 0;
+    position: sticky; /*en las siguientes usé fixed y z-index por necesidad*/
+}
+
+.navbar a {
+    color: #F1FAEE;
+    text-decoration: none;
+    font-weight: bold; 
+    padding: 14px 100px;
+    text-align: right;  
+    font-size: 24px;   
+}
+
+.navbar a:hover {
+    background-color: #1D3557;
+    color: #F1FAEE;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 10px; /*el valor usado en las otras páginas es distinto*/
+}
+
+.navbar li {
+    display: inline-block;
+    margin-right: 20px;/*el valor usado en las otras páginas creadas a partir de esta es de 0*/
+    margin-left: 0; /*no logré el desplazamiento hacia la izquierda*/ 
+    position: relative;
+}
+
+/* Estilos para el submenú */
+.submenu ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ca8217;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0px 0px;
+}
+
+.submenu:hover ul {
+    display: block;
+}
+
+.submenu ul li {
+    text-align: left !important; /* No funciona, el texto queda centralizado y no pude poner completos algunos títulos*/
+}
+
+.navbar li.submenu ul li {
+    text-align: left !important; /* No funciona, el texto queda centralizado y no pude poner completos algunos títulos*/
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        position: unset;
+    }
+    .navbar a {
+        text-align: left;
+    }    
+}
+
+/* Estilo general del contenedor flex */
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+aside {
+    flex-basis: 25%;
+    background-color: #ddd; /*Color de fondo para la barra lateral izquierda */
+    padding: 20px; /* Espaciado interno para mejorar la apariencia */
+    font-size: 18px;
+}
+
+.bloque-con-borde {
+    border: 2px solid #FFA500;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: white; /* Fondo blanco para cada bloque */
+}
+
+
+main {
+    flex-grow: 1;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr); /* Dos filas para las imágenes y descripciones */
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas para las imágenes y descripciones */
+    gap: 20px;
+}
+
+.item {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+}
+
+.item-image img {
+    width: 100%;
+    height: auto;
+}
+
+.video-link {
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.item-description {
+    padding: 10px;
+    background-color: #ddd;
+    text-align: left;
+    font-size: 30px;
+    font-weight: bold; 
+}
+
+main {
+    width: 70%; 
+    float: left; 
+  }
+  
+  aside {
+    width: 30%; 
+    float: left; 
+  }
+  
+  @media screen and (min-width: 800px) {
+    main {
+      width: 60%;  }
+  
+    aside {
+      width: 40%; 
+    }
+  }
+  
+
+.footer {
+    padding: 0.9375rem 1.875rem;
+    background-color: #e18547;
+}
+
+.ft-legal-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ft-legal-list li {
+    margin: 0.125rem 0.625rem;
+    white-space: nowrap;
+    color: #1D3557;
+}
+
+.footer p {
+    margin-bottom: 10px;
+    font-size: 11px;
+    color: #fff;
+    margin: 0 0 15px; 
+    font-style: normal;
+    line-height: 1.8em;
+    max-width: 100%;
+}
+
+/* se aplica al penúltimo */
+.ft-legal-list li:nth-last-child(2) {
+    flex: 1; /* lo mismo que flex-grow: 1; se expandirá y tomará tanto espacio como sea posible */ 
+}
+
