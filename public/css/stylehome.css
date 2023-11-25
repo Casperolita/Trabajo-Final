@@ -1,0 +1,172 @@
+﻿/**/
+/**/
+
+/* Estilos navbar */
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #e18547;   
+    width: 100%;
+    /*border-width: 10px;
+    border-style: inset outset;
+    border-color: #1D3557;*/
+    color: #1D3557;
+    top: 0;
+    position: fixed; /*en la página madre usé sticky*/
+    z-index: 100;/*no lo usé en la página madre.*/
+}
+
+.navbar a {
+    color: #1D3557; 
+    text-decoration: none;
+    font-weight: bold;
+    padding: 3px 40px;/*los valores son distintos a la página madre; la modificación afecta al menú y submenú. Si modifico "40" aumentará el ancho*/ 
+    /*text-align: right;  
+    font-size: 24px; No entiendo porque el efecto es distinto en la página madre que es "Tienda de plantas"*/
+    
+}
+
+.navbar a:hover {
+    background-color: #1D3557;
+    color: #F1FAEE;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 0;/*el valor usado aquí es diferente al de la página madre; los 10px producen una separación con el borde superior e inferior*/
+}
+
+.navbar li {
+    display: inline-block;
+    margin-right: 0px; /*el valor usado en la página madre es de 20px*/
+    margin-left: 0; /*no logré el desplazamiento hacia la izquierda*/ 
+    position: relative;
+}
+
+/* Estilos para el submenú */
+.submenu ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ca8217;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0px 0px; /*A pesar del 0, el cambio de color tapaba al siguiente nombre*/
+}
+
+.submenu:hover ul {
+    display: block;
+}
+
+.submenu ul li {
+    text-align: left !important; /* No funciona, el texto queda centralizado y no pude poner completos algunos títulos*/
+}
+
+.navbar li.submenu ul li {
+    text-align: left !important; /* No funciona, el texto queda centralizado y no pude poner completos algunos títulos*/
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        position: unset;
+    }
+    .navbar a {
+        text-align: left; 
+    }
+}
+
+/*Estilos para al cuerpo de la página*/
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;/*si elimino esta propiedad el círculo se ubica arriba*/
+    height: 100vh;
+    margin: 0;
+    background-color: #e18547;
+}
+
+/* Ajustes al tamaño del círculo */
+#circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 400px;
+    margin-top: 20px; 
+    background: lightblue; /* Color de fondo directamente en el círculo */
+    color: blue;
+    font-size: 26px;
+    text-align: left;
+    border-style: inset outset;
+    border-width: 10px;
+    border-color: #1D3557;
+    border-radius: 50%;/* Añadido para hacer un círculo mediante border-radius */
+    /*shape-outside: circle(50% at 50% 50%);*/
+    /*clip-path: circle(50% at 50% 50%);*/   
+    /*position: relative;  Sirve para posicionar elementos hijos relativos a este elemento*/ 
+}
+
+#circle p {
+    text-align: left;
+    margin: 0; /* Elimina el margen predeterminado del párrafo */
+    padding-left: 0;
+}
+
+#circle::after { content: ""; display: table; clear: both; } 
+
+/*#circle ul {
+    padding-left: 0;
+    list-style: none;
+}*/
+
+/*#circle li {
+    display: list-item;
+    text-align: left;
+  }*/
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.9375rem 1.875rem;
+    background-color: #e18547;
+    z-index: 100; /* el footer tiene que estar por encima de otros elementos */
+}
+
+}
+
+.ft-legal-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ft-legal-list li {
+    margin: 0.125rem 0.625rem;
+    white-space: nowrap;
+    color: #1D3557;
+}
+
+.footer p {
+    margin-bottom: 10px;
+    font-size: 11px;
+    color: #fff;
+    margin: 0 0 15px; 
+    font-style: normal;
+    line-height: 1.8em;
+    max-width: 100%;
+}
+
+/* se aplica al penúltimo */
+.ft-legal-list li:nth-last-child(2) {
+    flex: 1; /* lo mismo que flex-grow: 1; se expandirá y tomará tanto espacio como sea posible */ 
+}
+
+
+
