@@ -1,112 +1,23 @@
-<!-- Esta página es una réplica de, algunas partes de la página madre que se llama "Tienda de plantas".-->
-        
-        <!DOCTYPE html>
-        <html lang="es">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link rel="stylesheet" href="public/css/styletucompra.css">
-            <title>Tu Compra</title>
-            <!-- <link rel="icon" href="public/img/icon.jpg"> -->
-        </head>
-        <body>
-            <nav class="navbar">
-                <a class="navbar-brand" href="#">My Ecommerce Store</a>
-                <ul>
-                    <li><a href="/ecommerce/Home/index.html">Home</a></li>
-                    <li class="submenu">
-                        <a href="/ecommerce/productos/index.html">Productos</a>
-                        <ul>
-                            <li><a href="#">Tienda de plantas</a></li> 
-                            <li><a href="#">Decoración</a></li>
-                            <li><a href="#">Materiales construcción</a></li>
-                            <!--<li><a href="#">Vintage</a></li>-->
-                            <!--<li><a href="#">Bazar</a></li>-->
-                            <!--<li><a href="#">Entretenimiento</a></li>-->
-                        </ul>
-                    </li>
-                    <li><a href="/ecommerce/registro/index.html">Registrarse</a></li>
-                    <li><a href="/ecommerce/tucompra/index.html">Tu compra</a></li>
-                </ul>
-            </nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/css/stylelegales.css">
+    <title>Legales</title>
+</head>
+<body>
 
-          <div class="formulario">
-            <div class="container">
-                <form action="">
-                    <h1>
-                        <i class="envío"></i>
-                        Detalles de envío
-                    </h1>
-                    <div class="name">
-                        <div class="input-group">
-                            <label for="apellido">Apellido</label>
-                            <input type="text" name="f-name">
-                        </div>
-                        <div class="input-group">
-                            <label for="nombre">Nombre</label>
-                            <input type="text" name="l-name">
-                        </div>
-                    </div>
-                    <div class="input-group">
-                        <label for="address">Domicilio</label>
-                        <input type="text" name="address">
-                    </div>
-                    <div class="city-state">
-                        <div class="input-group">
-                            <label for="city">Ciudad</label>
-                            <input type="text" name="city">
-                        </div>
-                        <div class="input-group">
-                            <label for="state">Provincia</label>
-                            <input type="text" name="state">
-                        </div>
-                    </div>
-                    <h1>
-                        <i class="tarjeta-de-crédito-sin-relleno"></i> Información del pago
-                    </h1>
-                    <div class="input-group">
-                        <label for="card-num">Tarjeta de Crédito No.</label>
-                        <input type="text" name="card-num">
-                    </div>
-                    <div class="card-info">
-                        <div class="input-group">
-                            <label for="expire">Expira</label>
-                            <input type="text" name="expire" placeholder="MM/YY">
-                        </div>
-                        <div class="input-group">
-                            <label for="security">CCV</label>
-                            <input type="text" name="security">
-                        </div>
-                    </div>
-                    <div class="btns">
-                        <button type="submit">Comprar</button>
-                        <!-- <button type="button">Volver</button> -->
-                    </div>
-                </form>
-            </div>
-        </div>
+    <nav class="navbar">
+        <a href="/inicio">Home</a>
+        <a href="/productos">Productos</a>
+        <a href="/contacto">Contacto</a>
+        <a href="/tucompra">Tu compra</a>
+    </nav>
 
-        
+    <div class="no-select">
+    <iframe src="public/views/AvisolegalTerminosyCondiciones.doc.html" width="100%" height="800px"></iframe>
+    </div>
 
-
-    <!-- Footer -->
-    <footer class="footer">
-        <section class="ft-legal">
-            <div>
-                <ul class="ft-legal-list">
-                    
-                     
-                    <!-- Enlace desde el formulario de registro al documento en legales -->
-                    <a href="../legales/public/views/AvisolegalTerminosyCondiciones.doc.html" target="_blank">Aviso legal - Términos y condiciones</a>
-
-                    <li>&copy; 2023 Copyright Shop_online</li>
-                </ul>
-            </div>
-        </section>
-    </footer>
-
-
-            </form>
-        </body>
-        </html>
-        
+</body>
+</html>
