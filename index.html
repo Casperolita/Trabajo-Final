@@ -1,62 +1,133 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/css/stylehome.css">
-    <title>Home</title>
-</head>
-<body>
+<!-- Esta es la página madre. Primero diseñé este index y, luego lo repliqué para hacer las otras páginas.--> 
+ <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <link rel="stylesheet" href="tu-archivo-de-estilos.css">-->
+        <link rel="stylesheet"   href="public/css/styleverdant.css">
+        <title>Tienda de Plantas</title>
+        <!-- <link rel=”icon” href="public/img/icon.jpg"> -->
+    </head>
+    <body>
+      
+        <header>
+            <div class="nombre">
+                <span class="verdant">Verdant</span>Tienda de plantas
+            </div>          
+        </header>
 
-    <nav class="navbar">
-        <a class="navbar-brand" href="#">My Ecommerce Store</a>
-        <ul>
-            <li><a href="/ecommerce/Home/index.html">Home</a></li>
-            <li class="submenu">
-                <a href="/ecommerce/productos/index.html">Productos</a>
-                <ul>
-                    <li><a href="#">Tienda de plantas</a></li> 
-                    <li><a href="#">Decoración</a></li>
-                    <li><a href="#">Materiales construcción</a></li>
-                    <!--<li><a href="#">Vintage</a></li>-->
-                    <!--<li><a href="#">Bazar</a></li>-->
-                    <!--<li><a href="#">Entretenimiento</a></li>-->
-                </ul>
-            </li>
-            <li><a href="/ecommerce/registro/index.html">Registrarse</a></li>
-            <li><a href="/ecommerce/tucompra/index.html">Tu compra</a></li>
-        </ul>
-    </nav>
-
-    <div id="circle">
-        <h1>Bienvenidos</h1>
-         <p>En este sitio encontrarás:<br>
-            --buenos precios<br>
-            --atención personalizada<br>
-            --seriedad en el trato<br>
-        </p>
-    </div>
-
-
-</body>
-
-<footer class="footer">
-    <section class="ft-legal">
-        <div>
-            <ul class="ft-legal-list">
-                <a href="../legales/public/views/AvisolegalTerminosyCondiciones.doc.html" target="_blank">Aviso legal - Términos y condiciones</a>
-                <li>&copy; 2023 Copyright Shop_online</li>
+        <nav class="navbar">
+            <a class="navbar-brand" href="#">My Ecommerce Store</a>
+            <ul>
+                <li><a href="/ecommerce/Home/index.html">Home</a></li>
+                <li class="submenu">
+                    <a href="/ecommerce/productos/index.html">Productos</a>
+                    <ul>
+                        <li><a href="#">Tienda de plantas</a></li> 
+                        <li><a href="#">Decoración</a></li>
+                        <li><a href="#">Materiales construcción</a></li>
+                        <!--<li><a href="#">Vintage</a></li>-->
+                        <!--<li><a href="#">Bazar</a></li>-->
+                        <!--<li><a href="#">Entretenimiento</a></li>-->
+                    </ul>
+                </li>
+                <li><a href="/ecommerce/registro/index.html">Registrarse</a></li>
+                <li><a href="/ecommerce/tucompra/index.html">Tu compra</a></li>
             </ul>
+        </nav>
+    
+        <div class="container">
+            <aside>
+                <div class="aside">
+                    <div class="bloque-con-borde">
+                        <h1>PAGÁ COMO QUIERAS</h1>
+                        <p>Tarjetas de crédito o transferencia</p>
+                    </div>
+                    <div class="bloque-con-borde">
+                        <h1>COMPRÁ CON SEGURIDAD</h1>
+                        <p>Tus datos siempre protegidos</p>
+                    </div>
+                    <div class="bloque-con-borde">
+                        <h1>ELEGÍ MODO DE ENVÍO</h1>
+                    </div>
+                </div>
+            </aside>
+            
+            <main>
+                <div class="grid-container">
+                    <!-- Fila 1 -->
+                    <div class="grid-item">
+                        <div class="item">
+                            <div class="item-image"><img src="public/img/justicia_carnea.jpg" alt="floral"></div>
+                            <div class="item-description">
+                                <p>Justicia carnea <br>Flores grandes muy vistosas.<br><br>$800</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="item">
+                            <div class="item-image"><img src="public/img/billbergia_rosea.jpg" alt="floral"></div>
+                            <div class="item-description">
+                                <p>Billbergia rosea<br>Bromelia muy reproductiva.<br><br>$700</p>
+                                <a href="public/videos/floracion_bromelias/floracion_bromelias.mp4" class="video-link">Ver video</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="item">
+                            <div class="item-image"><img src="public/img/tibouchina_heteromalla.jpg" alt="floral"></div>
+                            <div class="item-description">
+                                <p>Tibouchina heteromalla<br>Hojas aterciopeladas y flores violetas.<br><br>$1.200</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fila 2 -->
+                    <div class="grid-item">
+                        <div class="item">
+                            <div class="item-image"><img src="public/img/monstera.jpg" alt="exterior"></div>
+                            <div class="item-description">
+                                <p>Monstera<br>También llamada Costilla de Adán. <br> Hojas de 20 a 90 cm de largo por 20 a 80 cm de ancho.<br><br>$1.800</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="item">
+                            <div class="item-image"><img src="public/img/schefflera.jpg" alt="interior-exterior"></div>
+                            <div class="item-description">
+                                <p>Aralia Schefflera Arborícola Gold Capella<br>Variedad excepcional y fácil de cultivar.<br><br>$600</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="item">
+                            <div class="item-image"><img src="public/img/dracaena_deremensis.jpg" alt="interior-exterior"></div>
+                            <div class="item-description">
+                                <p>Dracaena deremensis<br>Arbusto de porte vertical.<br><br>$1.800</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
         </div>
-    </section>
-</footer>
+           
+  
+                  
+        
+    </body>
+ 
+    <footer class="footer">
+        <section class="ft-legal">
+            <div>
+                <ul class="ft-legal-list">
+                    <a href="../legales/public/views/AvisolegalTerminosyCondiciones.doc.html" target="_blank">Aviso legal - Términos y condiciones</a>
+                    <li>&copy; 2023 Copyright Shop_online</li>
+                </ul>
+            </div>
+        </section>
+    </footer>
+    
 
-
-</html>
-
-
-<!--<p>En este sitio encontrarás:<br>
-       <li>--buenos precios</li>
-       <li>--atención personalizada</li>
-       <li>--seriedad en el trato</li>
-    </p> La lista no se pudo usar porque el formato predeterminado del navegador lo impidió-->
+        
+    </html>
+    
